@@ -1,0 +1,340 @@
+<!-- estimated by limouren -->
+<!--
+  Pretty good work. It would be better if you can decide HTML elements to use 
+  solely by its content and sementics, and less influenced by the design.
+-->
+<!-- 
+復刻 Oursky 首頁：https://www.oursky.com/
+1. 不需要一模一樣
+2. 請忽略所有 JS 部分
+3. 此作業會以「HTML架構」為主要批改方向
+PS. 請盡量不要看網頁原始碼 HTML 架構，盡量自己試試看！
+PS. 可使用 bootstrap, tailwind 等 utility css library
+ -->
+
+ <!DOCTYPE html>
+ <html>
+   <head>
+     <title>Oursky Home Page</title>
+     <meta charset="UTF-8" />
+     <link
+       rel="stylesheet"
+       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+       integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+       crossorigin="anonymous"
+     />
+     <link
+       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+       rel="stylesheet"
+     />
+ 
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    </head>
+ 
+   <body>
+     <!-- TODO: write your code -->
+ 
+     <header class="bg-blue-700 ">
+       <div class="container mx-auto">
+         <div class="flex justify-between p-2 ">
+           <!-- NIT: Content-wise it should be "Oursky". Use CSS to uppercase the text. -->
+             <h1 class="text-4xl text-white font-bold ">OURSKY</h1>
+             <nav class="flex">
+               <ul class="hidden md:flex md:flex-row md:space-x-2 md:text-white md:items-center">
+                 <!-- FIXME: Expect writing the submenus HTML even you are not going to implement it -->
+                 <!-- NOTE: That being said, good use of ul & li -->
+                 <li><a href="">Products</a></li>
+                 <!-- NIT: Services -->
+                 <li><a href="">Serrvices</a></li>
+                 <li><a href="">Resources</a></li>
+                 <li><a href="">About Us</a></li>
+                 <li class="bg-yellow-500 rounded px-4 py-2"><a href="">Start your project</a></li>
+               </ul>
+               <button class="text-4xl text-white font-bold border-2 md:hidden">'-'</button>
+             </nav>           
+         </div>
+       </div>
+     </header>
+ 
+     <main>
+         <!-- 藍藍的 視覺 -->
+       <section class="bg-blue-700 ">
+         <div class="container mx-auto ">
+           <div class="flex px-2  flex-col py-32 flex-full space-y-14 md:flex-row md:items-center md:space-x-2">
+             <div class="text-4xl text-white font-bold items-center  justify-center text-center md:text-left mx-12 md:w-1/2">
+               <h2>We design</h2>
+               <p>and develop award-winning applications</p>
+             </div>
+ 
+             <div class="px-24 md:px-0 md:w-1/2">
+               <img
+                 src="https://www.oursky.com/assets/img/oursky-hero.png"
+                 alt=""
+               />
+             </div>
+ 
+           </div>
+         </div>
+       </section>
+
+ <!-- 灰灰的 -->
+    <section>
+             <div class="bg-gray-200">
+                 <div class="container mx-auto">
+                   <div class="flex px-2 py-32 ">
+                     <div class="flex flex-col text-center space-y-4 md:w-2/3">
+                      <!-- NOTE: Good element selection -->
+                       <h3>About Us</h3>
+                       <p class="font-black px-6">
+                         Oursky is a team of talented developers, designers, data
+                         scientists, product and project managers and QA engineers
+                         working from Hong Kong, London, and Taipei. Using cutting-edge
+                         technologies, we are an end-to-end digital product, web, and
+                         mobile app development consultancy whose creations have garnered
+                         millions of downloads and awards from the Apple App Store and
+                         Asia Smart Apps Awards.
+                       </p>
+                     </div>
+                     <div class="md:w-1/3" >
+                       <!-- 一塊動畫 -->
+                     </div>
+                   </div>
+                 </div>
+               </div>        
+       </section>
+ 
+       <!-- 白白的三塊 case study -->
+       <section>
+         <div class="container mx-auto">
+           <div class="flex flex-col px-2 pt-10 pb-20 ">
+             <!-- 
+               NIT: I apprepriate that you spent efforts on making this section has a header.
+               But IMO "Explore more ..." is an invitation to the full content, and typically it is placed at the end of a section.
+               (consider "Read more..." of a article abstract).
+
+               For me, I might do something like the following:
+              -->
+              <!-- NIT: 1. Use a header: Case studies, and hide it in CSS -->
+              <h2 class="flex order-last mt-10"><a href="">Explore more of our work -></a></h2>
+ 
+              <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row flex-wrap">
+                 <div class="rounded-lg bg-red-400 text-white p-4 flex flex-col w-full md:w-1/3">
+                    <!-- 
+                      NIT: 2. The "case study" here is more like a presentational text rather than content,
+                      I will generate it using ::before selector.
+                    -->
+                     <h3 class="mb-4">CASE STUDY</h3>
+                     <h4 class="mb-2">brand name</h4>
+                     <p class="mb-40 ">description</p>
+                 </div>
+                 <div class="rounded-lg bg-red-400 text-white p-4 flex flex-col w-full md:w-1/3">
+                   <h3 class="mb-4">CASE STUDY</h3>
+                   <h4 class="mb-2">brand name</h4>
+                   <p class="mb-40 ">description</p>
+                 </div>
+                 <div class="rounded-lg bg-red-400 text-white p-4 flex flex-col w-full md:w-1/3">
+                   <h3 class="mb-4">CASE STUDY</h3>
+                   <h4 class="mb-2">brand name</h4>
+                   <p class="mb-40 ">description</p>
+                 </div>
+              </div>
+ 
+           </div>
+         </div>
+       </section>
+ 
+       <!-- 灰灰的兩塊 -->
+       <section class="bg-gray-200">
+         <div class="container mx-auto">
+           <div class="flex flex-col px-2 pt-4 pb-20 space-y-4 md:flex-row md:space-x-2 md:border-box">
+             <div class="flex flex-col text-center  space-y-4 w-full md:w-1/2">
+               <h2 class="text-xl font-extrabold px-8">Digital transformation powered by ingenuity</h2>
+               <p class="text-sm">We don’t just build apps. Oursky creates digital experiences that help our partners succeed in today’s fast-paced business landscape.</p>
+               <p class="text-sm">We work with founders in creating their blueprints for success — from minimum viable products (MVPs) to interactive prototypes. Oursky uses an iterative approach to help startups launch faster, scale quickly, and deliver great user experience.</p>                  
+               <p class="text-sm">Oursky partners with enterprises to fast-track their digital transformation, helping them adopt and transition to cloud-native technologies and microservices.</p>
+               <!-- NIT: Could be wrapped in a p element -->
+               <a href="https://www.oursky.com/services">More on our core services</a>
+             </div>
+             <div class="rounded shadow-xl bg-white py-8 px-12 flex flex-col space-y-8 w-full md:w-1/2 ">
+               <h3 class="text-center ">Core Services</h3>
+               <!-- NIT: Could be modeled as ul and li element -->
+               <div class="flex space-x-4 items-center">
+                   <i class="fas fa-angry"></i>
+                   <div class="">
+                     <h4 class="text-xs font-black">Service</h4>
+                     <p class="text-xs">description</p>
+                   </div>
+               </div>
+               <div class="flex space-x-4 items-center">
+                   <i class="fas fa-angry"></i>
+                   <div class="">
+                     <h4 class="text-xs font-black">Service</h4>
+                     <p class="text-xs">description</p>
+                   </div>
+               </div>
+               <div class="flex space-x-4 items-center">
+                   <i class="fas fa-angry"></i>
+                   <div class="">
+                     <h4 class="text-xs font-black">Service</h4>
+                     <p class="text-xs">description</p>
+                   </div>
+               </div>     
+               <div class="flex space-x-4 items-center">
+                   <i class="fas fa-angry"></i>
+                   <div class="">
+                     <h4 class="text-xs font-black">Service</h4>
+                     <p class="text-xs">description</p>
+                   </div>
+               </div>                                       
+             </div>
+           </div>
+         </div>
+       </section>
+ 
+       <!-- 白白的兩塊 -->
+       <section class="">
+         <div class="container mx-auto">
+           <div class="text-center flex flex-col px-2 py-16 md:flex-row md:py-8">
+             <!-- NOTE: Good use of content re-ordering! -->
+               <div class="flex flex-col space-y-4 w-full md:w-1/2 md:order-last">
+                 <h2 class="text-xl font-extrabold px-8 ">We’re your low-code solution for your next IT project.</h2>
+                 <p class="text-sm">We develop various open-source solutions that can be used by developers and organizations around the world to solve problems.</p>
+                 <p class="text-sm">At the heart of Oursky is the art of software engineering: translating expertise and ideas into opportunities</p>
+               </div>
+            
+               <div class="rounded shadow-xl bg-white py-8 px-12 flex flex-col space-y-8 w-full md:w-1/2 ">
+                 <h3 class="text-center ">Core Services</h3>
+                 <div class="flex space-x-4 items-center">
+                     <i class="fas fa-angry"></i>
+                     <div class="">
+                       <h4 class="text-xs font-black">Service</h4>
+                       <p class="text-xs">description</p>
+                     </div>
+                 </div>
+                 <div class="flex space-x-4 items-center">
+                     <i class="fas fa-angry"></i>
+                     <div class="">
+                       <h4 class="text-xs font-black">Service</h4>
+                       <p class="text-xs">description</p>
+                     </div>
+                 </div>
+                 <div class="flex space-x-4 items-center">
+                     <i class="fas fa-angry"></i>
+                     <div class="">
+                       <h4 class="text-xs font-black">Service</h4>
+                       <p class="text-xs">description</p>
+                     </div>
+                 </div>                                          
+               </div>
+ 
+           </div>
+       </section>
+ 
+       <!-- 灰灰的 商標 -->
+       <section class="bg-gray-200">
+         <div class="container mx-auto">
+           <div class="flex px-2 flex-col py-16">
+             <h2 class="text-sm text-center font-black">
+               We help companies around the world bring their ideas to life.
+             </h2>
+             <!-- NIT: These can be ul element :D -->
+             <div class="grid grid-cols-2 md:grid-cols-4 gap-20 px-20 py-20">
+               <img
+                 src="https://www.oursky.com/assets/img/logo__asos.svg"
+                 alt=""
+               />
+               <img
+                 src="https://www.oursky.com/assets/img/logo__tr.svg"
+                 alt=""
+               />
+               <img
+                 src="https://www.oursky.com/assets/img/logo__hlia.svg"
+                 alt=""
+               />
+               <img
+                 src="https://www.oursky.com/assets/img/logo__sc.svg"
+                 alt=""
+               />
+               <img
+                 src="https://www.oursky.com/assets/img/logo__asos.svg"
+                 alt=""
+               />
+               <img
+                 src="https://www.oursky.com/assets/img/logo__tr.svg"
+                 alt=""
+               />
+               <img
+                 src="https://www.oursky.com/assets/img/logo__hlia.svg"
+                 alt=""
+               />
+               <img
+                 src="https://www.oursky.com/assets/img/logo__sc.svg"
+                 alt=""
+               />
+             </div>
+           </div>
+         </div>
+       </section>
+ 
+       <!-- 深藍色 案鈕 -->
+       <section class="bg-blue-900">
+         <div class="container mx-auto">
+           <div class="flex px-2 py-16 flex-col items-center text-white">
+             <h3 class="mb-4 text-xl">We build award-winning digital products.</h3>
+             <p class="text-sm font-bold mb-6">Oursky can help you create one.</p>
+             <!-- FIXME: It is more like an A element which looks like a button, as it does navigation. -->
+             <button class="rounded-md px-4 py-2 bg-yellow-500">Let’s talk!</button>
+           </div>
+         </div>
+       </section>
+     </main>
+ 
+     <footer class="bg-gray-900 text-gray-400">
+         <div class="container mx-auto">
+             <div class="flex px-2 pt-4 pb-20 flex-col space-y-6 md:flex-row md:space-y-0 md:justify-end">
+ 
+                <!-- FIXME: These are clearly a H + an unordered list. Could use CSS to remove the list style -->
+                 <div class="flex px-2 flex-col">
+                     <p class="text-gray-700">Products</p>
+                     <a href="#">Authgear</a>
+                     <a href="#">FormX.ai</a>
+                     <a href="#">Gesprek</a>
+                     <a href="#">UI/UX and Digital Product Design</a>
+                     <a href="#">Machine Learning Solutions (Skylab.ai)</a>
+                 </div>
+ 
+                 <div class="flex px-2 flex-col">
+                     <p class="text-gray-700">Services</p>
+                     <a href="#">Digital Product Development</a>
+                     <a href="#">Mobile App Development</a>
+                     <a href="#">Web App Development</a>
+                     <a href="#">UI/UX and Digital Product Design</a>
+                     <a href="#">Machine Learning Solutions (Skylab.ai)</a>
+                 </div>
+ 
+               <div class="flex px-2 flex-col">
+                 <p class="text-gray-700">Know More</p>
+                 <a href="#">About Us</a>
+                 <a href="#">Tech Stack</a>
+                 <a href="#">Case Studies</a>
+                 <a href="#">Engineering Blog</a>
+                 <a href="#">Open-Source Projects</a>
+               </div>
+ 
+               <div class="flex px-2 flex-col">
+                 <p class="text-gray-700">Connect</p>
+                 <a href="#">Facebook</a>
+                 <a href="#">Linkedin</a>
+                 <a href="#">Twitter</a>
+                 <a href="#">Service Enquiry</a>
+                 <a href="#">Find Us</a>
+                 <a href="#">Join Us</a>
+               </div>
+             </div>
+ 
+             
+         </div>
+         <div class="text-center p-6"><a href="" class="text-xs text-gray-700">hello@oursky.com<br>© Oursky Ltd.</a></div>
+     </footer>
+   </body>
+ </html>
