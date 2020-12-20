@@ -15,7 +15,7 @@
 ## 先拆 component
 起手式一樣是建 layout、header、footer、main。除了以版面切割，也會整理那些是重複出現的一組東西（講專業(?)一點就是 DRY），就是我的 component（元件）。我的 component 分兩種，靜態和動態（會傳資料進去）的，例如一個新聞網站，社群分享按鈕是靜態的，文章列表裡面的 ArticleItem 是動態的。
 
-以我目前做的專案，我的 view 分 layout、components、page 三類，大概長這樣：
+以我目前做的專案，我的 view 分 layout、components、pages 三類，大概長這樣：
 
 ```
 components
@@ -23,7 +23,7 @@ components
 ├－－ArticleItem
 ├ button
 ├－－SocialButtons
-page
+pages
 ├ HomePage
 ├ CategoryPage
 layout
