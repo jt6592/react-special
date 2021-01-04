@@ -15,28 +15,28 @@
 雖然有點晚了，但本周的目標是：
 
 p1
--[X] 寫幾個髒元件，想想怎麼讓它變好
--[X] 練習一個 UI Library
+- [X] 寫幾個髒元件，想想怎麼讓它變好
+- [X] 練習一個 UI Library
 => material UI
--[X] 練習 router
+- [X] 練習 router
 
 p2
--[] 了解 React 的 controlled / uncontrolled component
--[] 處理 UI state
--[] 思考為什麼自己寫出 bad smell
--[] reach-router 比較
+- [ ] 了解 React 的 controlled / uncontrolled component
+- [ ] 處理 UI state
+- [ ] 思考為什麼自己寫出 bad smell
+- [ ] reach-router 比較
 
 p3
--[] 用用 twind
+- [ ] 用用 twind
 
 ### 實作
 
 寫作業遇到的問題
--[] fetch data 要怎麼拆
--[] state 綁定 re-render 其到他模組，想想為什麼，以後怎麼避免
+- [ ] fetch data 要怎麼拆
+- [ ] state 綁定 re-render 其到他模組，想想為什麼，以後怎麼避免
 
 上周沒消化的問題
--[] state 同步/非同步，何時渲染?
+- [ ] state 同步/非同步，何時渲染?
 
 ### 答案
 
